@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Backup szablonów
+templates/*.bak
+templates/*.live10.bak
+
+# Wygenerowane kity (zostawiamy poza repo)
+KITY EXPORT/
+DILLA/
+
+# Test/scratch pliki Live
+TOKYO_36.adg
+PATCHED_*.adg
+PSP9_TEST_*.adg
+KIT_TEST_*/
+TEST_TOKYO_*/
+TOKYO_FINAL_*/
+
+# Live Project z testów
+TOKYO_SESSION Project/
+*.als
+
+# Memory (lokalne, na maszynie użytkownika)
+.claude/
+
+# Editor swap files
+*.swp
+*~
