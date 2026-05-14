@@ -155,6 +155,20 @@ Live 12 **ignoruje** wartości `<ReceivingNote>` w drum rack chains przy ładowa
 
 Bez tego Ableton remapowałby twój kit do 77-92 (czyli F4-G#5) niezależnie od tego co napisane w pliku. (Patrz: [memory/live12_drum_rack_quirk.md](.claude/projects/.../live12_drum_rack_quirk.md))
 
+## Standalone macOS app
+
+```
+pip3 install pyinstaller pygame tkinterdnd2
+./build_app.sh
+```
+
+Wynik: `dist/MPC2DrumRack.app` (~63 MB, samodzielna, nie wymaga Pythona).
+Przenieś do `/Applications` lub uruchom z miejsca:
+
+```
+open dist/MPC2DrumRack.app
+```
+
 ## Struktura kodu
 
 ```

@@ -42,7 +42,12 @@ from typing import Dict, List, Optional, Tuple
 # Konstanty
 # ---------------------------------------------------------------------------
 
-TEMPLATES_DIR = Path(__file__).parent / "templates"
+# W PyInstaller (frozen) zasoby są w sys._MEIPASS; przy uruchomieniu z .py
+# obok skryptu.
+if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
+    TEMPLATES_DIR = Path(sys._MEIPASS) / "templates"
+else:
+    TEMPLATES_DIR = Path(__file__).parent / "templates"
 
 SAMPLE_EXTENSIONS = (".wav", ".WAV", ".aif", ".aiff", ".AIF", ".AIFF",
                      ".flac", ".FLAC", ".mp3", ".MP3", ".ogg", ".OGG")

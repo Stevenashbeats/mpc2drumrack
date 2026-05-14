@@ -32,3 +32,8 @@ TOKYO_SESSION Project/
 # Editor swap files
 *.swp
 *~
+
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
